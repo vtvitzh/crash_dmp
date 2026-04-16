@@ -1,0 +1,7 @@
+INFO:DLIB: Log server started on port 49715
+INFO:ENGINE: Target listening with name: DESKTOP-J3AVTF5 - fe80::a0d:3dc1:28:ba42 - Windows
+INFO:ENGINE: Engine service started on port 49716
+INFO:GRAPHICS: Installed graphics device 'ADAPTER_FAMILY_OPENGL'
+INFO:ENGINE: Defold Engine 1.12.3 (0ad9c86)
+INFO:PROFILER: Initialized Remotery (ws://127.0.0.1:17815/rmt)
+INFO:ENGINE: Loading data from: build/default

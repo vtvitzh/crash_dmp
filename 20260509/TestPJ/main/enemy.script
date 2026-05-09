@@ -14,11 +14,6 @@ function final(self)
 end
 
 function late_update(self, dt)
-	msg.post(self.shadow, "size", {size = "2"});
+	msg.post(self.shadow, "enable");
 	go.set_position(go.get_position(), self.shadow);
-	if (not self.display) then
-		msg.post(self.shadow, "disable");
-	else
-		msg.post(self.shadow, "enable");
-	end
 end

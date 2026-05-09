@@ -1,0 +1,24 @@
+
+go.property("kind", 0); -- モンスターの種類
+function init(self)
+	self.spriteUrl = "#ghost";
+	msg.post(self.spriteUrl, "enable");
+	self.shadow = factory.create("/factory#shadowFactory", go.get_position());
+	msg.post(self.shadow, "disable");
+	msg.post(self.shadow, "size", {size = "3"});
+	msg.post(self.shadow, "scale", {scale = 2});
+end
+
+function final(self)
+	go.delete(self.shadow); -- タイトルでのマップリセットの際に必要
+end
+
+function late_update(self, dt)
+	msg.post(self.shadow, "size", {size = "2"});
+	go.set_position(go.get_position(), self.shadow);
+	if (not self.display) then
+		msg.post(self.shadow, "disable");
+	else
+		msg.post(self.shadow, "enable");
+	end
+end

@@ -1,0 +1,10 @@
+
+function on_message(self, message_id, message, sender)
+	if message_id == hash("size") then
+		msg.post("#sprite", "enable");
+		sprite.play_flipbook("#sprite", message.size);
+		msg.post("#sprite", "disable");
+	elseif message_id == hash("scale") then
+		go.set_scale(vmath.vector3(1) + vmath.vector3(0.1) * message.scale);
+	end
+end

@@ -1,0 +1,6 @@
+
+function init(self)
+	for i = 1, 500, 1 do
+		factory.create("/factory#enemyFactory", vmath.vector3(i * 16, 0, 0), nil, {kind = 1});
+	end
+end
